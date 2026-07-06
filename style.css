@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plain Light';
+    color: #fff;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color   : #0b0b0b;
+    padding: 25vh 10vw;
+}
+
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase; 
+    font-weight: 900;
+}
+#main{
+    position: relative;
+    background-color: #15151511;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+ 
