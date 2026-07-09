@@ -182,43 +182,50 @@ document.querySelector("#hero3").addEventListener("mouseleave",function(){
     })
 })
 }
-function footerAnimation() {
+function footerAnimation(){
 
-  var clutter = ""
-  var clutter2 = ""
-  document.querySelector("#footer h1").textContent.split("").forEach(function (elem) {
-    clutter += `<span>${elem}</span>`
-  })
-  document.querySelector("#footer h1").innerHTML = clutter
-  document.querySelector("#footer h2").textContent.split("").forEach(function (elem) {
-    clutter2 += `<span>${elem}</span>`
-  })
-  document.querySelector("#footer h2").innerHTML = clutter2
+    let h1 = document.querySelector("#footer-text h1");
+    let h2 = document.querySelector("#footer-text h2");
 
+    h1.innerHTML = h1.textContent.split("").map(letter=>{
+        return `<span>${letter === " " ? "&nbsp;" : letter}</span>`;
+    }).join("");
 
-  document.querySelector("#footer-text").addEventListener("mouseenter", function () {
-    gsap.to("#footer h1 span", {
-      opacity: 0,
-      stagger: 0.05
-    })
-    gsap.to("#footer h2 span", {
-      delay: 0.35,
-      opacity: 1,
-      stagger: 0.1
-    })
-  })
-  document.querySelector("#footer-text").addEventListener("mouseleave", function () {
-    gsap.to("#footer h1 span", {
-      opacity: 1,
-      stagger: 0.1,
-      delay: 0.35,
+    h2.innerHTML = h2.textContent.split("").map(letter=>{
+        return `<span>${letter === " " ? "&nbsp;" : letter}</span>`;
+    }).join("");
 
-    })
-    gsap.to("#footer h2 span", {
-      opacity: 0,
-      stagger: 0.05
-    })
-  })
+    const tl = gsap.timeline({paused:true});
+
+    tl.to("#footer-text h1 span",{
+        y:-120,
+        opacity:0,
+        stagger:0.03,
+        ease:"power3.inOut",
+        duration:0.4
+    });
+
+    tl.fromTo("#footer-text h2 span",
+    {
+        y:120,
+        opacity:0
+    },
+    {
+        y:0,
+        opacity:1,
+        stagger:0.03,
+        ease:"power3.inOut",
+        duration:0.4
+    },"<");
+
+    document.querySelector("#footer-text").addEventListener("mouseenter",()=>{
+        tl.play();
+    });
+
+    document.querySelector("#footer-text").addEventListener("mouseleave",()=>{
+        tl.reverse();
+    });
+
 }
 
 loadingAnimation()

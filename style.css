@@ -569,7 +569,38 @@ body {
     left: -12%;
     top: 8%;
 }
+#footer-text{
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
 
+#footer-text h1,
+#footer-text h2{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+#footer-text h2{
+    position: absolute;
+    top: 0;
+    width: max-content;
+    left: 0;
+}
+
+#footer-text h2 span{
+    opacity: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-family: "Silk Serif";
+    font-style: italic;
+}
+
+#footer-text h1 span,
+#footer-text h2 span{
+    display: inline-block;
+}
 .underline {
     height: 1px;
     width: 100%;
