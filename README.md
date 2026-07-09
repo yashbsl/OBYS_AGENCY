@@ -77,7 +77,7 @@ Obys-Agency/
 Clone the repository
 
 ```bash
-git clone https://github.com/yashbsl/Obys-Agency.git
+https://github.com/yashbsl/OBYS_AGENCY
 ```
 
 Go into the project
