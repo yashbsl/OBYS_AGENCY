@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obys</title>
-    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets\favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <div id="main">
-        <div id="page1">
+        <div id="page1" data-scroll data-scroll-speed="-1">
             <div id="nav">
                 <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
                     <path
@@ -84,17 +85,38 @@
                 <h1>Experience</h1>
             </div>
         </div>
-        <div id="page2">
+        <div id="page2" data-scroll data-scroll-speed="-2">
             <div id="video-container">
                 <div id="video-cursor">
                     <i class="ri-play-mini-fill"></i>
                 </div>
-                <img src="img.jpeg">
-                <video autoplay loop muted src="12777893_3840_2160_30fps.mp4"></video>
+                <img src="assets\img.jpeg">
+                <video autoplay loop muted src="assets\12777893_3840_2160_30fps.mp4"></video>
             </div>
         </div>
-        <div id="page3"></div>
-        <div id="page4">
+        <div id="page3" data-scroll data-scroll-speed="-2">
+            <h1>OUR PROJECTs</h1>
+            <div class="underline"></div>
+            <div id="image-div-container">
+                <div class="image-div">
+                    <img src="assets\img1-1.jpg" alt="">
+                    <img src="assets\img1-2.jpg" alt="">
+                </div>
+                <div class="image-div">
+                    <img src="assets\img1-1.jpg" alt="">
+                    <img src="assets\img1-2.jpg" alt="">
+                </div>
+                <div class="image-div">
+                    <img src="assets\img1-1.jpg" alt="">
+                    <img src="assets\img1-2.jpg" alt="">
+                </div>
+                <div class="image-div">
+                    <img src="assets\img1-1.jpg" alt="">
+                    <img src="assets\img1-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="page4" data-scroll data-scroll-speed="-2" >
             <div id="page4-content">
                 <h1>About Obys</h1>
                 <div class="underline"> </div>
@@ -140,7 +162,7 @@
                     celebrate
                     together. </p>
                 <div id="page4-flex">
-                    <img src="2.png" alt="">
+                    <img src="assets\2.png" alt="">
                     <p>
                         We are happy to present our new website and updated version of Obys agency. As before we are
                         open for new projects worldwide!
@@ -176,7 +198,7 @@
                 <div class="underline"> </div>
             </div>
         </div>
-        <div id="page5">
+        <div id="page5" data-scroll >
             <div class="elem">
                 <h1><span>Sport</span> - Technology - Fashion - </h1>
                 <h1><span>Sport</span> - Technology - Fashion - </h1>
@@ -194,7 +216,7 @@
                 <h1><span>Science</span> - Partners - Travel - </h1>
             </div>
         </div>
-        <div id="footer">
+        <div id="footer" data-scroll data-scroll-speed="-2">
             <h1>Let's create</h1>
             <div class="underline"></div>
             <div id="footer-div">
@@ -223,13 +245,15 @@
             <h5>Obys Agency © 2026</h5>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
         integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
 </body>
